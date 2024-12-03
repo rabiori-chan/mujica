@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import random
 import platform
 import numpy as np
+from getpass import getpass
 
 サービス番号 = "0104116116112115058047047098105116046108121047"
 
@@ -143,7 +144,7 @@ def メインファンクション():
     url_ピンジャオ = 学校選び()
     
     学籍 = input("学籍番号を入力してください:")
-    パスワード = input("パスワードを入力してください:")
+    パスワード = getpass("パスワードを入力してください:")
     
     os_system = platform.system()
     
