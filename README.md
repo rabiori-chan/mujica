@@ -1,4 +1,3 @@
-```
 # BandG Dream! 教務サービスプログラム
 
 ![Ave Mujica](https://ice.frostsky.com/2024/12/03/eef608d1305f5ab32ebc9c0a8c11af0a.png)
