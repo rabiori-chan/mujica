@@ -100,10 +100,10 @@ def クリックガウス分布(page):
             radio_buttons = row.query_selector_all('input[type="radio"]')
             if len(radio_buttons) > 0:
                 random_index = int(round(np.random.normal(0, 0.5)))
-                button_index = max(0, min(random_index, len(radio_buttons) - 1))
+                button_index = max(0, min(random_index, 2))
                 
                 if len(選んだ総数) > 0 and all(x == 選んだ総数[0] for x in 選んだ総数):
-                    available_indices = list(range(len(radio_buttons)))
+                    available_indices = list(range(3))
                     available_indices.remove(選んだ総数[0])
                     button_index = random.choice(available_indices)
                 
@@ -117,7 +117,7 @@ def クリックガウス分布(page):
             random_row = random.randint(0, len(rows) - 1)
             radio_buttons = rows[random_row].query_selector_all('input[type="radio"]')
             if len(radio_buttons) > 0:
-                available_indices = list(range(len(radio_buttons)))
+                available_indices = list(range(3))
                 available_indices.remove(選んだ総数[0])
                 new_index = random.choice(available_indices)
                 radio_buttons[new_index].click()
