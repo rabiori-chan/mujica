@@ -29,7 +29,8 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --name evaluation_tool main.py
+          $env:PLAYWRIGHT_BROWSERS_PATH="0"
+          pyinstaller --onefile --name evaluation_tool --noconsole=False --icon=appicon.ico main.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
