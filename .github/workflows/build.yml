@@ -29,7 +29,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          $env:PLAYWRIGHT_BROWSERS_PATH="0"
+          set PLAYWRIGHT_BROWSERS_PATH=0
           pyinstaller --onefile --name evaluation_tool --console --icon=appicon.ico main.py
 
       - name: Upload artifact
